@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="get" action="/results/" class="searchbox">
+  {{ form.q }}
+  <button type="submit">Search</button>
+</form>
+{% endblock %}

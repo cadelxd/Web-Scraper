@@ -1,0 +1,9 @@
+Django
+requests
+beautifulsoup4
+duckduckgo_search
+sentence-transformers
+torch
+selenium
+webdriver-manager
+aiohttp

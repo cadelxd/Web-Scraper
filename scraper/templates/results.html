@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="get" action="/results/" class="searchbox">
+  {{ form.q }}
+  <button type="submit">Search</button>
+</form>
+
+{% if query %}
+  <h2>Unique Points for: "{{ query }}"</h2>
+
+  {% if points %}
+    <ol>
+    {% for p in points %}
+      <li class="point">
+        {{ p.paragraph }}
+        <div class="source">source: <a href="{{ p.source }}" target="_blank">{{ p.source }}</a></div>
+      </li>
+    {% endfor %}
+    </ol>
+  {% else %}
+    <p>No unique points found for this query. Try a different topic or a more general search.</p>
+  {% endif %}
+
+{% endif %}
+{% endblock %}
